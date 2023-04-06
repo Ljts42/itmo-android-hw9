@@ -5,8 +5,7 @@ import android.view.MenuItem
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.github.ljts42.hw9_arch.R
-import com.github.ljts42.hw9_arch.utils.Constants
-import com.squareup.picasso.Picasso
+import com.github.ljts42.hw9_arch.utils.downloadAndSetImage
 
 class BigImageActivity : AppCompatActivity() {
 
@@ -16,8 +15,7 @@ class BigImageActivity : AppCompatActivity() {
 
         val imageView: ImageView = findViewById(R.id.image_big)
         val link = intent.getStringExtra("imageUrl")
-        Picasso.get().load("${Constants.BASE_URL}/img/$link").noFade()
-            .placeholder(R.drawable.ic_broken_image).into(imageView)
+        downloadAndSetImage("img/$link", imageView)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
