@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">hw9-arch</string>
+    <string name="input_hint">Write a message...</string>
+</resources>
